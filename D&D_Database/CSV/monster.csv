@@ -1,0 +1,6 @@
+Mon_Name,Alignment,Max_Hit_Point,Environment,CR,Mon_Type,Attributes,Passive_Perception,Characteristics,Size,Summonable,AC,Resistances,Immunities,Speed_ft,Languages
+Acolyte,Any,2d8,Urban,0.25,Humanoid,"Medicine +4, Religion +2",12,Spellcasting,Medium,0,10,NULL,NULL,30,Any one language
+Death Dog,Neutral Evil,6d8+12,"Plains, Deserts",1,Monstrosity,"Perception +5, Stealth +4",15,"Two-Headed, Multiattack",Medium,0,12,NULL,NULL,40,NULL
+Giant Eagle,Neutral Good,4d10+4,Ice Mountains,1,Beast,Perception +4,14,"Keen Sight, Multiattack",Large,1,13,NULL,NULL,"10, fly 80","Giant Eagle, Uncommon, Auran"
+Hill Giant,Chaotic Evil,10d12+40,Hill,5,Giant,Perception +2,12,Multiattack,Huge,0,13,NULL,NULL,40,Giant
+Drider,Chaotic Evil,13d10+52,Underdark,6,Monstrosity,"Perception +5, Stealth +9",15,"Fey Ancestry, Innate Spellcasting, Spider Climb, Sunlight Sensitivity, Web Walker, Multiattack",Large,0,19,NULL,NULL,"30, climb 30","Elvish, Undercommon"

@@ -1,0 +1,6 @@
+Back_Name,Feature_Given,Personality,Ideal,Bond,Flaw,Background_items,Languages
+Acolyte,Shelter of the Faith,NULL,NULL,NULL,NULL,"Holy symbol, 5 sticks of incense, vestments, a set of common clothes and a pouch containing 15 gp.",2 of your choice
+Charlatan,False Identity,NULL,NULL,NULL,NULL,"A set of fine clothes, a disguise kit, tools of the con of your choice (ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke), and a pouch containing 15 gp.",NULL
+Folk Hero,Rustic Hospitality,NULL,NULL,NULL,NULL,"A set of artisan’s tools (one of your choice), a shovel, an iron pot, a set of common clothes, and a pouch containing 10 gp.",NULL
+Knight,Retainers,NULL,NULL,NULL,NULL,"A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25 gp.",1 of your choice
+Urchin,City Secrets,NULL,NULL,NULL,NULL,"A small knife, a map of the city you grew up in, a pet mouse, a token to remember your parents by, a set of common clothes, and a pouch containing 10 gp.",NULL

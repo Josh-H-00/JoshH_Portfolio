@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>D&D Database</title>
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/specimen_files/specimen_stylesheet.css')}}" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stylesheet.css')}}" type="text/css" charset="utf-8" />
+
+  <style type="text/css">
+  body{
+    font-family: 'vecnaregular';
+  }
+  table, th, td {
+    border: 3px solid #CC6600;
+    padding: 5px;
+
+  }
+  table {
+    border-spacing: 1px;
+    border-collapse: separate;
+    border-radius: 5px 25px;
+  }
+  </style>
+ 
+</head>
+
+<body style="background-color:papayawhip;">
+
+    <table style="width:100%" >
+      {% for item in data %}
+        <tr>
+          {% for column in item %}
+            <th>{{column}}</th>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+</body>
+ 
+</html>

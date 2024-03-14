@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D&D Database</title>
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/specimen_files/specimen_stylesheet.css')}}" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stylesheet.css')}}" type="text/css" charset="utf-8" />
+    <style type="text/css">
+					body{
+				font-family: 'vecnaregular';
+							}
+              
+		</style>
+</head>
+
+<body style="background-color:papayawhip;">
+  <form action="/request" method="POST">
+    <p >name <input type="text" name="Field to Search" /></p>
+    <p><input type="submit" value="Submit"/></p>
+  </form>
+  <button class="tablink" onclick="openPage('Monster', this, 'maroon')" id="defaultOpen">Monster</button>
+  <button class="tablink" onclick="openPage('Spell', this, 'maroon')">Spell</button>
+  <button class="tablink" onclick="openPage('Class', this, 'maroon')">Class</button>
+    <button class="tablink" onclick="openPage('Subclass', this, 'maroon')">Subclass</button>
+  <button class="tablink" onclick="openPage('Item', this, 'maroon')">Item</button>
+    <button class="tablink" onclick="openPage('Weapon', this, 'maroon')">Weapon</button>
+    <button class="tablink" onclick="openPage('Armor', this, 'maroon')">Armor</button>
+  <button class="tablink" onclick="openPage('Race', this, 'maroon')">Race</button>
+  <button class="tablink" onclick="openPage('Feature', this, 'maroon')">Feature</button>
+  <button class="tablink" onclick="openPage('Background', this, 'maroon')">Background</button>
+  <button class="tablink" onclick="openPage('DamageType', this, 'maroon')">DamageType</button>
+  <button class="tablink" onclick="openPage('Condition', this, 'maroon')">Condition</button>
+  <button class="tablink" onclick="openPage('Proficiency', this, 'maroon')">Proficiency</button>
+  
+  <div id="Monster" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Monsters</b></h1>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="Spell" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Spells</b></h1>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Class" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Classes</b></h1>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Subclass" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Subclasses</b></h1>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Item" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Items</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Weapon" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Weapons</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Armor" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Armor</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Race" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Races</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Feature" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Features</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Background" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Backgrounds</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="DamageType" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Damage Types</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Condition" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Conditions</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Proficiency" class="tabcontent">
+  <pre>
+  
+  </pre>
+  <h1 style="text-align:center; color:#331900;"><b>Proficiencies</b></h1>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "sienna";
+    tablinks[i].style.fontFamily = "vecnaregular";
+    tablinks[i].style.color = "linen";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = "saddlebrown";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

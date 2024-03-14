@@ -1,0 +1,6 @@
+Race_Name,Size,Avg_Weight_lbs,Avg_Max_Age,Speed_ft,Alignment,Lanugages,Abiliyt_Score_Inc
+Human,Medium,184,80,30,No Particular,Common +1,All+1
+Dragonborn,Medium,250,80,30,Good,"Draconic, Common","Str+2, Chr+1"
+Gnome,Small,40,500,25,Good,"Gnomish, Common",Int+2
+Elf,Medium,150,750,30,Chaotic,"Elvish, Common",Dex+2
+Half-Orc,Medium,190,75,30,Evil,"Orc, Common","Str+2, Const+1"

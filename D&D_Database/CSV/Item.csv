@@ -1,0 +1,6 @@
+Item_Name,Rarity,Weight_lbs,Price_gp,Magical_Properties,Descript,Type
+Longsword,Common,3,15,0,A military one-handed melee weapon in the heavy blade weapon group. A longsword is a versatile weapon. ,Martial Melee Weapon
+Light Crossbow,Common,5,25,0,A simple two-handed ranged weapon.,Simple Ranged Weapon
+Chain Mail,Common,55,75,0,"Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion impact of blows. The suit includes gauntlets.",Heavy Armor
+Portable hole,Rare,0,20000,0,"A portable hole is a circle of cloth spun from the webs of a phase spider interwoven with strands of ether and beams of starlight. When opened fully, a portable hole is 6 feet in diameter, but it can be folded up to be as small as a pocket handkerchief. When spread upon any surface, it causes an extradimensional space 10 feet deep to come into being. This hole can be picked up from inside or out by simply taking hold of the edges of the cloth and folding it up. Either way, the entrance disappears, but anything inside the hole remains.",Wondrous Item
+Helm of Teleportation,Rare,3,73500,1,"This helm has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the teleport spell from it. The helm regains 1d3 expended charges daily at dawn.",Wondrous Item

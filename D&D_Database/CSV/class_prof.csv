@@ -1,0 +1,89 @@
+Class_id,Prof_id
+Barbarian,Light Armor
+Barbarian,Medium Armor
+Barbarian,Shields
+Barbarian,Simple Weapons
+Barbarian,Martial Weapons
+Barbarian,Saving Throw Const
+Barbarian,Saving Throw Str
+Barbarian,Animal Handling
+Barbarian,Athletics
+Barbarian,Intimidation
+Barbarian,Nature
+Barbarian,Perception
+Barbarian,Survival
+Druid,Light Armor
+Druid,Medium Armor
+Druid,Shields
+Druid,Clubs
+Druid,Daggers
+Druid,Darts
+Druid,Javelins
+Druid,Maces
+Druid,Quarterstaffs
+Druid,Scimitars
+Druid,Sickles
+Druid,Slings
+Druid,Spears
+Druid,Herbalsim Kit
+Druid,Saving Throw Int
+Druid,Saving Throw Wis
+Druid,Arcana
+Druid,Animal Handling
+Druid,Insight
+Druid,Medicine
+Druid,Nature
+Druid,Perception
+Druid,Religion
+Druid,Survival
+Fighter,Light Armor
+Fighter,Medium Armor
+Fighter,Heavy Armor
+Fighter,Shields
+Fighter,Simple Weapons
+Fighter,Martial Weapons
+Fighter,Saving Throw Str
+Fighter,Saving Throw Const
+Fighter,Acrobatics
+Fighter,Animal Handling
+Fighter,Athletics
+Fighter,History
+Fighter,Insight
+Fighter,Intimidation
+Fighter,Perception
+Fighter,Survival
+Ranger,Light Armor
+Ranger,Medium Armor
+Ranger,Shields
+Ranger,Simple Weapons
+Ranger,Martial Weapons
+Ranger,Saving Throw Str
+Ranger,Saving Throw Dex
+Ranger,Animal Handling
+Ranger,Athletics
+Ranger,Insight
+Ranger,Investigation
+Ranger,Nature
+Ranger,Perception
+Ranger,Stealth
+Ranger,Survival
+Rogue,Light Armor
+Rogue,Simple Weapons
+Rogue,Hand Crossbows
+Rogue,Longswords
+Rogue,Rapiers
+Rogue,Shortswords
+Rogue,Thieve's Tools
+Rogue,Saving Throw Dex
+Rogue,Saving Throw Int
+Rogue,Acrobatics
+Rogue,Athletics
+Rogue,Deception
+Rogue,Insight
+Rogue,Intimidation
+Rogue,Investigation
+Rogue,Perception
+Rogue,Performance
+Rogue,Persuasion
+Rogue,Sleight of Hand
+Rogue,Stealth

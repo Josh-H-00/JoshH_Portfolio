@@ -1,0 +1,53 @@
+Proficiency
+Light Armor
+Medium Armor
+Shields
+Simple Weapons
+Martial Weapons
+Clubs
+Daggers
+Darts
+Javelins
+Maces
+Quarterstaffs
+Scimitars
+Sickles
+Slings
+Spears
+Herbalism Kit
+Heavy Armor
+Hand Crossbows
+Longswords
+Rapiers
+Shortswords
+Theieve's Tools
+Acrobatics
+Animal Handling
+Arcana
+Athletics 
+Deception
+History
+Insight
+Intimidation
+Investigation
+Medicine
+Nature
+Perception
+Performance
+Persuasion
+Religion
+Sleight of Hand
+Stealth
+Survival
+Poisoner's Kit
+Saving Throw Str
+Saving Throw Dex
+Saving Throw Const
+Saving Throw Int
+Saving Throw Wis
+Saving Throw Char
+Disguise Kit
+Forgery Kit
+Vehicles(land)
+Artisan Tools
+Gaming Sets

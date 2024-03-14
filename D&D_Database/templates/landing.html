@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D&D Database</title>
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/specimen_files/specimen_stylesheet.css')}}" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stylesheet.css')}}" type="text/css" charset="utf-8" />
+    <style type="text/css">
+			body{
+        font-family: 'vecnaregular';
+			}
+              
+      table, th, td {
+        border: 1px solid #CC6600;
+        padding: 5px;
+        border-collapse: separate;
+        border-radius: 5px 5px;
+      }
+      table {
+        max-width: 95%;
+        width:95%;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 2px;
+        background-color: #FFCC99;
+      }
+      
+      #nav_buttons {
+        border: 1px solid #FFCC99;
+        padding: 5px;
+        font-family: 'vecnaregular';
+        color: #331900;
+      }
+      
+      #menu_buttons {
+        border: 1px solid #FFCC99;
+        padding: 5px;
+        font-family: 'vecnaregular';
+      }
+      
+      #DataCell {
+        color: #331900;
+        border: 1px solid #CC6600;
+        padding: 5px;
+        border-collapse: separate;
+        border-radius: 1px 1px;
+        background-color: antiquewhite;
+      }
+      
+      #FieldCell {
+        border: 1px solid #CC6600;
+        padding: 5px;
+        border-collapse: separate;
+        border-radius: 0px 0px;
+        background-color: #582211;
+        color:linen;
+      }
+      
+		</style>
+</head>
+
+<body style="background-color:papayawhip;">
+  <table id="nav_buttons">
+    <tr>
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Monsters" name="nav_button"/></p>
+        </form>
+      </td>
+      
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Spells" name="nav_button"/></p>
+        </form>
+      </td>
+      
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Classes" name="nav_button"/></p>
+        </form>
+      </td>
+      
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Backgrounds" name="nav_button"/></p>
+        </form>
+      </td>
+      
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Conditions" name="nav_button"/></p>
+        </form>
+      </td>
+      
+      <td id = "nav_buttons">
+        <form action="/" method="POST">
+          <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Proficiencies" name="nav_button"/></p>
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <table id="menu_buttons">
+    <tr>
+      <td id="menu_buttons">
+        <button style="color: linen; background-color: #582211; font-family: 'vecnaregular';" id="Toggle Item" onclick="toggleAddItemForm()">Add Item</button>
+      </td>
+      
+      <td>
+        <button style="color: linen; background-color: #582211; font-family: 'vecnaregular';" id="Commit Item" onclick="commitAddItemForm()">Commit Item</button>
+      </td>
+    <tr>
+  </table>
+      
+  <div id="Hide Menu" class="tabcontent">
+    <button class="tablink" onclick="openPage('Show Menu', this, 'maroon')">Show Menu</button>
+  </div>
+        
+  <div id="Show Menu" class="tabcontent">
+    <button class="tablink" onclick="openPage('Hide Menu', this, 'maroon')" id="defaultOpen">Hide Menu</button>
+  
+    <form action="/" method="POST">
+      <input type="hidden" value={{curr_page}} name="nav_button">
+      {% for item in fields %}
+        <input type="hidden" value={{item}} name="curr_columns">
+      {% endfor %}
+      <table id="menu_buttons">
+        <tr>
+          <td id = "menu_buttons">
+            <p>
+              <select style="color: linen; background-color: #582211; font-family: 'vecnaregular';" name="sort_select" id="sort_select">
+              {% for item in fields %}
+                <option style="color: linen; background-color: #582211; font-family: 'vecnaregular';" value={{item}}>{{item}}</option>
+              {% endfor %}
+              <label id="sort_select" for="sort_select">Sort By:</label>
+            </p>
+          </td>
+          
+          <td id = "menu_buttons">
+            <input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="checkbox" id="ascend_checkbox" name="ascend_checkbox" value="Ascending?">
+            <label for="vehicle1">Descending</label><br>
+          </td>
+          
+          <td id = "menu_buttons">
+            <p>Exclude columns:</p><br>
+            {% for item in fields %}
+              <input style="font-size:auto;" type="checkbox" value={{item}} name="hide_checkbox" id='checkbox_{{item}}'>
+              <label style="font-size:auto;" for="checkbox_"{{item}}>{{item}}</label><br>
+            {% endfor %}
+          </td>
+          
+          <td id = "menu_buttons">
+            <p>Create new exclusion rule (Type '/' for OR operator):</p><br>
+            <div id="exclusion_space">
+            
+            </div>
+            <button type="button" onclick="makeRule()">+</button>
+          </td>
+          
+          <td id = "menu_buttons">
+            <p><input style="color: linen; background-color: #582211; font-family: 'vecnaregular';" type="submit" value="Submit →" name="go_button"/></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <table>
+    <tr>
+      {% for column in fields %}
+        <th id="FieldCell">{{column}}</th>
+      {% endfor %}
+    </tr>
+    
+    
+    <form action="/" method="POST" id="addItemForm">
+      <input type="hidden" value={{curr_page}} name="nav_button">
+      {% for item in fields %}
+        <input type="hidden" value={{item}} name="curr_columns">
+      {% endfor %}
+      <tr id="addItemRow">
+        {% for column in fields %}
+          <th id="DataCell">
+            <input type="text" name="addItemInput" size="5">
+          </th>
+        {% endfor %}
+      </tr>
+    </form>
+    
+    {% for item in data %}
+      <tr>
+        {% for column in item %}
+          <th id="DataCell">{{column}}</th>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+
+
+  <script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "sienna";
+      tablinks[i].style.fontFamily = "vecnaregular";
+      tablinks[i].style.color = "linen";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = "saddlebrown";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  <script>
+  function makeRule() {
+    console.log("makeRule()");
+    var p = document.getElementById("exclusion_space");
+    
+    var newTable = document.createElement("table");
+    newTable.setAttribute("id", "menu_buttons");
+    p.appendChild(newTable);
+    
+    var newRow = document.createElement("tr");
+    newTable.appendChild(newRow);
+    
+    var newColumn = document.createElement("td");
+    newColumn.setAttribute("id", "menu_buttons");
+    newRow.appendChild(newColumn);
+    
+    var newSelect = document.createElement("select");
+    newSelect.setAttribute("name", "exclusion_select");
+    newSelect.setAttribute("id", "exclusion_select");
+    newColumn.appendChild(newSelect);
+    
+    {% for item in fields %}
+      console.log("Iterating")
+      var newOption = document.createElement("option");
+      newOption.setAttribute("value", '{{item}}');
+      newOption.appendChild(document.createTextNode('{{item}}'));
+      newSelect.appendChild(newOption);
+    {% endfor %}
+    
+    var newColumn = document.createElement("td");
+    newColumn.setAttribute("id", "menu_buttons");
+    newRow.appendChild(newColumn);
+    
+    var newSelect = document.createElement("select");
+    newSelect.setAttribute("name", "exclusion_op_select");
+    newSelect.setAttribute("id", "exclusion_op_select");
+    newColumn.appendChild(newSelect);
+    
+    let options = ['>','<','=','!=', 'BEGINS', 'CONTAINS']
+    for (i = 0; i < options.length; i++)
+    {
+      var newOption = document.createElement("option");
+      newOption.setAttribute("value", options[i]);
+      newOption.appendChild(document.createTextNode(options[i]));
+      newSelect.appendChild(newOption)
+    }
+    
+    var newColumn = document.createElement("td");
+    newColumn.setAttribute("id", "menu_buttons");
+    newRow.appendChild(newColumn);
+    
+    var newInput = document.createElement("input");
+    newInput.setAttribute("type","text");
+    newInput.setAttribute("name","exclusion_input");
+    newColumn.append(newInput)
+  }
+  </script>
+  
+  <script>
+    function toggleAddItemForm() {
+      var form = document.getElementById("addItemRow");
+      var toggleButton = document.getElementById("Toggle Item");
+      var commitButton = document.getElementById("Commit Item");
+      
+      if (form.style.display == "none")
+      {
+        form.style.display = "table-row";
+        toggleButton.innerHTML = ("Cancel Item");
+        commitButton.style.display = "block"
+      } else {
+        form.style.display = "none";
+        toggleButton.innerHTML = ("Add Item");
+        commitButton.style.display = "none"
+      }
+    }
+    
+    function commitAddItemForm() {
+      var form = document.getElementById("addItemForm");
+      form.submit();
+    }
+    
+    document.getElementById("addItemRow").style.display = "none";
+    document.getElementById("Commit Item").style.display = "none";
+  </script>
+  
+</body>
+</html>

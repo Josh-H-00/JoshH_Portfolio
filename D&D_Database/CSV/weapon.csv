@@ -1,0 +1,3 @@
+Weap_Name,Damage,Dmg_type,Properties
+Longsword,1d8,Slashing,Versatile
+Light Crossbow,1d8,Piercing,"Ammunition, Loading, Range(80/320), Two-Handed"

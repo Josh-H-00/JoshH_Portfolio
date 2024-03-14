@@ -1,0 +1,10 @@
+Atk_Name,Mon_id,Multiattack,Hit_Bonus,Damage,Dmg_Type,Atk_Range,Condition_applied,Saving_Throw
+Bite,Death Dog,1,4,1d6+2,Piercing,5ft,Poisoned,DC 12 Constitution
+Beak,Giant Eagle,1,5,1d6+3,Piercing,5ft,NULL,NULL
+Talons,Giant Eagle,1,5,2d6+3,Slashing,5ft,NULL,NULL
+Club,Acolyte,0,2,1d4,Bludgeoning,5ft,NULL,NULL
+Bite,Drider,1,6,1d4 + 2d8,"Piercing, Poisoning",5ft,NULL,NULL
+Longsword,Drider,1,6,1d10+3 (two-handed) 1d8+3 (one-handed),Slashing,5ft,NULL,NULL
+Longbow,Drider,1,6,1d8+3 + 1d8,"Piercing, Poisoning",150/600ft,NULL,NULL
+Greatclub,Hill Giant,1,8,3d8+5,Bludgeoning,10FT,NULL,NULL
+Rock,Hill Giant,0,8,3d10+5,Bludgeoning,60/240ft,NULL,NULL

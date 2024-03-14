@@ -1,0 +1,19 @@
+Skill_Name,Attribute
+Acrobatics,Dex
+Animal Handling,Wis
+Arcana,Int
+Athletics ,Str
+Deception,Char
+History,Int
+Insight,Wis
+Intimidation,Char
+Investigation,Int
+Medicine,Wis
+Nature,Int
+Perception,Wis
+Performance,Char
+Persuasion,Char
+Religion,Int
+Sleight of Hand,Dex
+Stealth,Dex
+Survival,Wis
